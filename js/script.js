@@ -11,11 +11,10 @@ const sunrise = document.querySelector(".value-sunrise");
 const sunset = document.querySelector(".value-sunset");
 
 searchInput.addEventListener("change",(e)=>{
-    console.log("ok");
+    
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=${APP_ID}&units=metric&lang=vi`)
     .then( async  response => {
         const data = await response.json();
-        console.log(data);
         
         citynName.innerHTML = data.name || DEFAULT;
         stateName.innerHTML = data.weather[0].description || DEFAULT;
