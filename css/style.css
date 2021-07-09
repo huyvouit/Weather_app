@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main_color: #6fd2ff;
+  --vice_color: #46b4e5;
+}
+body {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+.container-sm {
+  background: linear-gradient(145deg, #6fd2ff, #46b4e5);
+  border-radius: 10px;
+}
+.zone {
+  margin-top: 120px;
+}
+
+@media (max-width: 575px) {
+  .zone {
+    margin: 50px 20px;
+  }
+}
+
+.section__main .searching-bar {
+  border-bottom: 1px solid white;
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 20px;
+}
+
+#input-bar {
+  background: transparent;
+  outline: none;
+  width: 100%;
+  padding: 3px 30px;
+  color: white;
+  border: 0;
+}
+.icon-search {
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+
+.info-weather {
+  line-height: 1;
+}
+.nameCity {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.temperature {
+  font-size: 5em;
+  position: relative;
+}
+
+.temperature::after {
+  content: "o";
+  position: absolute;
+  top: 0;
+  font-size: 2rem;
+}
+
+label {
+  font-weight: 700;
+}

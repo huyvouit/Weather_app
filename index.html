@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/moment.js"></script>
+    <title>Weater Today</title>
+  </head>
+  <body>
+    <div class="zone">
+      <div class="container-sm p-2">
+        <div class="section__main">
+          <div class="searching-bar mb-5">
+            <i class="fas fa-search icon-search"></i>
+            <input
+              type="text"
+              id="input-bar"
+              placeholder="Tìm thành phố"
+              name="city"
+            />
+          </div>
+          <div class="info-weather text-center">
+            <p class="nameCity">--</p>
+            <p class="state">--</p>
+            <img
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="weather-icon"
+              class="iconWeather"
+            />
+            <div class="div__temperature">
+              <div class="temperature">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="section__add mt-5 mb-2">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-6 text-center humidity">
+              <label for="">Độ ẩm</label>
+              <div class="value-humidity">0%</div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6 text-center wind">
+              <label for="">Gió</label>
+              <p class="value-wind">0 km/h</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6 text-center sunrise">
+              <label for="">Bình minh</label>
+              <div class="value-sunrise">0:00</div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6 text-center sunset">
+              <label for="">Hoàng hôn</label>
+              <div class="value-sunset">0:00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
