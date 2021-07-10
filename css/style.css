@@ -6,13 +6,14 @@
 :root {
   --main_color: #6fd2ff;
   --vice_color: #46b4e5;
+  --text-color: white;
 }
 body {
-  color: white;
+  color: var(--text-color);
   font-family: "Open Sans", sans-serif;
 }
 .container-sm {
-  background: linear-gradient(145deg, #6fd2ff, #46b4e5);
+  background: linear-gradient(145deg, var(--main_color), var(--vice_color));
   border-radius: 10px;
 }
 .zone {
@@ -24,9 +25,11 @@ body {
     margin: 50px 20px;
   }
 }
-
+.section__main {
+  position: relative;
+}
 .section__main .searching-bar {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--text-color);
   width: 50%;
   margin: 0 auto;
   position: relative;
@@ -41,7 +44,7 @@ body {
   outline: none;
   width: 100%;
   padding: 3px 30px;
-  color: white;
+  color: var(--text-color);
   border: 0;
 }
 .icon-search {
@@ -50,9 +53,63 @@ body {
   left: 0;
 }
 
+/* == css cho micro */
+.microphone {
+  cursor: pointer;
+}
+.microphone .recording-icon {
+  display: none;
+  width: 10px;
+  height: 10px;
+  background-color: #e22d2d;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite linear;
+}
+.microphone.recording .recording-icon {
+  display: inline-block;
+}
+.microphone.recording .fa-microphone {
+  display: none;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 3px 0 rgba(173, 0, 0, 0.3);
+  }
+  65% {
+    box-shadow: 0 0 3px 5px rgba(173, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 3px 5px rgba(173, 0, 0, 0);
+  }
+}
+
+/* ==css cho weather */
 .info-weather {
   line-height: 1;
+  position: relative;
 }
+.iconWeather {
+  position: relative;
+  animation: 3.5s icon infinite;
+}
+@keyframes icon {
+  0% {
+    transform: translateX(-5%);
+  }
+  25% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(5%);
+  }
+  75% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-5%);
+  }
+}
+
 .nameCity {
   font-size: 40px;
   font-weight: 300;
@@ -72,4 +129,10 @@ body {
 
 label {
   font-weight: 700;
+}
+
+.time-date {
+  position: absolute;
+  right: 10px;
+  bottom: -50px;
 }
