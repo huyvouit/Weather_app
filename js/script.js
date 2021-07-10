@@ -58,8 +58,8 @@ const handleVoice = (text) => {
 
     // "thời tiết tại Đà Nẵng" => ["thời tiết tại", "Đà Nẵng"]
     const handledText = text.toLowerCase();
-    if (handledText.includes('thành phố ')) {
-        const location = handledText.split('phố')[1].trim();
+    if (handledText.includes('thời tiết tại ')) {
+        const location = handledText.split('tại')[1].trim();
 
         console.log('location', location);
         searchInput.value = location;

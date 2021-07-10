@@ -5,7 +5,7 @@
 }
 :root {
   --main_color: #6fd2ff;
-  --vice_color: #46b4e5;
+  --vice_color: #258fbf;
   --text-color: white;
 }
 body {
@@ -96,14 +96,20 @@ body {
   0% {
     transform: translateX(-5%);
   }
-  25% {
-    transform: translateX(0%);
+  15% {
+    transform: translateX(-1%);
   }
-  50% {
+  30% {
+    transform: translateX(2%);
+  }
+  45% {
     transform: translateX(5%);
   }
+  60% {
+    transform: translateX(2%);
+  }
   75% {
-    transform: translateX(0%);
+    transform: translateX(-1%);
   }
   100% {
     transform: translateX(-5%);
